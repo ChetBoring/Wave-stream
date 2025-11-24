@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Онлайн-радиостанция</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="logo">
+                <div class="logo-img">
+                    <img src="images/wavestream.png" alt="Логотип">
+                </div>
+            </div>
+            <div class="search-container">
+                <img src="images/лупа.png" alt="Поиск" style="width:20px; height:20px; margin-right:10px;">
+                <input type="text" placeholder="хочу послушать">
+            </div>
+            <button class="login-btn" id="openLogin">ВОЙТИ</button>
+        </div>
+    </header>
+
+    <div class="login-overlay" id="loginOverlay">
+        <div class="login-form">
+            <button class="close-btn" id="closeLogin">
+                <i class="fas fa-times"></i>
+            </button>
+            <h2 class="login-title">Вход</h2>
+            <div class="form-group">
+                <input type="email" class="form-input" placeholder="Адрес электронной почты">
+            </div>
+            <div class="form-group">
+                <input type="password" class="form-input" placeholder="Пароль">
+            </div>
+            <button class="login-submit">ВОЙТИ</button>
+            <div class="register-link">
+                <a href="#">Регистрация</a>
+            </div>
+            <div class="register-text">
+                Если у вас еще нет аккаунта
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="sidebar">
+            <ul class="sidebar-nav">
+                <li><a href="#home" class="active">Главная</a></li>
+                <li><a href="#favorites">Избранное</a></li>
+                <li><a href="#schedule">Расписание</a></li>
+                <li><a href="#about">О нас</a></li>
+            </ul>
+        </div>
+        <div class="main-content">
+            <section id="home">
+                <div class="section-header">
+                    <h2 class="section-title">Популярные радиостанции</h2>
+                </div>
+                <div class="radio-grid">
+                    <div class="radio-card">
+                        <div class="radio-icon-container">
+                            <div class="radio-icon">
+                                <img src="images/Юлдаш.jpg" alt="Юлдаш">
+                            </div>
+                            <div class="play-overlay">
+                                <button class="play-btn-overlay">
+                                    <i class="fas fa-play"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <h3 class="radio-name">Юлдаш</h3>
+                    </div>
+                    <div class="radio-card">
+                        <div class="radio-icon-container">
+                            <div class="radio-icon">
+                                <img src="images/Южная волна.jpg" alt="Южная волна">
+                            </div>
+                            <div class="play-overlay">
+                                <button class="play-btn-overlay">
+                                    <i class="fas fa-play"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <h3 class="radio-name">Южная волна</h3>
+                    </div>
+                    <div class="radio-card">
+                        <div class="radio-icon-container">
+                            <div class="radio-icon">
+                                <img src="images/Умное радио.png" alt="Умное радио">
+                            </div>
+                            <div class="play-overlay">
+                                <button class="play-btn-overlay">
+                                    <i class="fas fa-play"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <h3 class="radio-name">Умное радио</h3>
+                    </div>
+                    <div class="radio-card">
+                        <div class="radio-icon-container">
+                            <div class="radio-icon">
+                                <img src="images/Европа Плюс.png" alt="Европа Плюс">
+                            </div>
+                            <div class="play-overlay">
+                                <button class="play-btn-overlay">
+                                    <i class="fas fa-play"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <h3 class="radio-name">Европа Плюс - Россия</h3>
+                    </div>
+                    <div class="radio-card">
+                        <div class="radio-icon-container">
+                            <div class="radio-icon">
+                                <img src="images/Радио Хит.png" alt="Радио Хит">
+                            </div>
+                            <div class="play-overlay">
+                                <button class="play-btn-overlay">
+                                    <i class="fas fa-play"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <h3 class="radio-name">Радио Хит</h3>
+                    </div>
+                    <div class="radio-card">
+                        <div class="radio-icon-container">
+                            <div class="radio-icon">
+                                <img src="images/Радио Дача.jpg" alt="Радио Дача">
+                            </div>
+                            <div class="play-overlay">
+                                <button class="play-btn-overlay">
+                                    <i class="fas fa-play"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <h3 class="radio-name">Радио Дача - Россия</h3>
+                    </div>
+                    <div class="radio-card">
+                        <div class="radio-icon-container">
+                            <div class="radio-icon">
+                                <img src="images/Юмор фм.png" alt="Юмор FM">
+                            </div>
+                            <div class="play-overlay">
+                                <button class="play-btn-overlay">
+                                    <i class="fas fa-play"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <h3 class="radio-name">Юмор FM - Россия</h3>
+                    </div>
+                    <div class="radio-card">
+                        <div class="radio-icon-container">
+                            <div class="radio-icon">
+                                <img src="images/Дорожное радио.png" alt="Дорожное радио">
+                            </div>
+                            <div class="play-overlay">
+                                <button class="play-btn-overlay">
+                                    <i class="fas fa-play"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <h3 class="radio-name">Дорожное радио</h3>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div class="player">
+                    <div class="player-info">
+                        <div class="album-art">
+                            <img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Album Art">
+                        </div>
+                        <div class="track-info">
+                            <div class="track-title">Summer Vibes</div>
+                            <div class="track-artist">DJ Sunshine & The Waves</div>
+                        </div>
+                    </div>
+                    <div class="player-controls">
+                        <button class="control-btn"><i class="fas fa-step-backward"></i></button>
+                        <button class="control-btn play-btn"><i class="fas fa-play"></i></button>
+                        <button class="control-btn"><i class="fas fa-step-forward"></i></button>
+                        <button class="control-btn"><i class="fas fa-heart"></i></button>
+                    </div>
+                    <div class="progress-container">
+                        <div class="progress-bar">
+                            <div class="progress"></div>
+                        </div>
+                        <div class="time-info">
+                            <span>1:24</span>
+                            <span>4:32</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="favorites">
+                <div class="section-header">
+                    <h2 class="section-title">Избранное</h2>
+                </div>
+                <div class="radio-grid">
+                    <div class="radio-card">
+                        <div class="radio-icon-container">
+                            <div class="radio-icon">
+                                <img src="images/Юлдаш.jpg" alt="Юлдаш">
+                            </div>
+                            <div class="play-overlay">
+                                <button class="play-btn-overlay">
+                                    <i class="fas fa-play"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <h3 class="radio-name">Юлдаш</h3>
+                    </div>
+                    <div class="radio-card">
+                        <div class="radio-icon-container">
+                            <div class="radio-icon">
+                                <img src="images/Южная волна.jpg" alt="Южная волна">
+                            </div>
+                            <div class="play-overlay">
+                                <button class="play-btn-overlay">
+                                    <i class="fas fa-play"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <h3 class="radio-name">Южная волна</h3>
+                    </div>
+                    <div class="radio-card">
+                        <div class="radio-icon-container">
+                            <div class="radio-icon">
+                                <img src="images/Умное радио.png" alt="Умное радио">
+                            </div>
+                            <div class="play-overlay">
+                                <button class="play-btn-overlay">
+                                    <i class="fas fa-play"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <h3 class="radio-name">Умное радио</h3>
+                    </div>
+                </div>
+            </section>
+            <section id="schedule">
+                <div class="section-header">
+                    <h2 class="section-title">Расписание эфиров</h2>
+                </div>
+                <div class="schedule-list">
+                    <div class="schedule-item">
+                        <div class="schedule-time">09:00 - 11:00</div>
+                        <div class="schedule-info">
+                            <h3 class="schedule-title">Утреннее шоу с Аней и Максом</h3>
+                            <p class="schedule-desc">Начните день с позитивной музыки и интересных бесед.</p>
+                        </div>
+                    </div>
+                    <div class="schedule-item">
+                        <div class="schedule-time">11:00 - 14:00</div>
+                        <div class="schedule-info">
+                            <h3 class="schedule-title">Музыкальный микс</h3>
+                            <p class="schedule-desc">Лучшие хиты разных жанров и эпох.</p>
+                        </div>
+                    </div>
+                    <div class="schedule-item">
+                        <div class="schedule-time">14:00 - 17:00</div>
+                        <div class="schedule-info">
+                            <h3 class="schedule-title">Дневной драйв</h3>
+                            <p class="schedule-desc">Энергичная музыка для продуктивного дня.</p>
+                        </div>
+                    </div>
+                    <div class="schedule-item">
+                        <div class="schedule-time">17:00 - 20:00</div>
+                        <div class="schedule-info">
+                            <h3 class="schedule-title">Вечерний чат</h3>
+                            <p class="schedule-desc">Обсуждаем актуальные темы с интересными гостями.</p>
+                        </div>
+                    </div>
+                    <div class="schedule-item">
+                        <div class="schedule-time">20:00 - 00:00</div>
+                        <div class="schedule-info">
+                            <h3 class="schedule-title">Ночные вибрации</h3>
+                            <p class="schedule-desc">Спокойная музыка для релаксации и отдыха.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="about">
+                <div class="section-header">
+                    <h2 class="section-title">О нас</h2>
+                </div>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p>WaveStream Radio была основана в 2020 году группой энтузиастов, которые верили, что музыка должна быть доступна каждому, в любое время и в любом месте. Мы начали с небольшой студии и мечты создать радиостанцию, которая объединит людей через силу музыки.</p>
+                        <br>
+                        <p>Сегодня мы гордимся тем, что стали одной из самых популярных онлайн-радиостанций в регионе, с аудиторией более 100,000 слушателей ежедневно.</p>
+                        
+                        <div class="mission-section">
+                            <h3 class="mission-title">Наша миссия</h3>
+                            <p>Мы стремимся создавать уникальный музыкальный опыт, сочетая лучшие хиты с открытием новых талантов. Наша команда тщательно отбирает каждый трек, чтобы обеспечить высокое качество звука и разнообразие музыкальных направлений.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contacts-block">
+                        <h3 class="contacts-title">Контакты</h3>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-info">
+                                <span class="contact-label">Email</span>
+                                <span class="contact-value">info@wavestream.ru</span>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="contact-info">
+                                <span class="contact-label">Телефон</span>
+                                <span class="contact-value">+7 (915) 123-45-67</span>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-info">
+                                <span class="contact-label">Адрес</span>
+                                <span class="contact-value">Астрахань, ул. Ленина, 1</span>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div class="contact-info">
+                                <span class="contact-label">Время работы</span>
+                                <span class="contact-value">Круглосуточно 24/7</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <img src="images/Нота.png" alt="Музыка">
+                        </div>
+                        <h3 class="feature-title">Более 10,000 треков</h3>
+                        <p class="feature-desc">Огромная библиотека музыки различных жанров и направлений</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <img src="images/Прямые эфиры.png" alt="Эфиры">
+                        </div>
+                        <h3 class="feature-title">Прямые эфиры</h3>
+                        <p class="feature-desc">Ежедневные живые выступления и интервью с известными артистами</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <img src="images/мульти.png" alt="Устройства">
+                        </div>
+                        <h3 class="feature-title">Мультиплатформенность</h3>
+                        <p class="feature-desc">Доступ с любого устройства: ПК, смартфон, планшет</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <img src="images/Премиум качество.png" alt="Качество">
+                        </div>
+                        <h3 class="feature-title">Премиум качество</h3>
+                        <p class="feature-desc">Высокое качество звука 320 kbps для настоящих меломанов</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-column">
+                <h3>Онлайн-радиостанция</h3>
+                <p>Современная онлайн-радиостанция с лучшей музыкой и интересными шоу.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-column">
+                <h3>Разделы</h3>
+                <ul class="footer-links">
+                    <li><a href="#home">Главная</a></li>
+                    <li><a href="#favorites">Избранное</a></li>
+                    <li><a href="#schedule">Расписание</a></li>
+                    <li><a href="#about">О нас</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Контакты</h3>
+                <ul class="footer-links">
+                    <li><i class="fas fa-map-marker-alt"></i> Астрахань, ул. Ленина, 1</li>
+                    <li><i class="fas fa-phone"></i> +7 (915) 123-45-67</li>
+                    <li><i class="fas fa-envelope"></i> info@wavestream.ru</li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Информация</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Питч-форма</a></li>
+                    <li><a href="#">Поддержка</a></li>
+                    <li><a href="#">Пользовательское соглашение</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2025 Wavestream. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <script src="script/script.js"></script>
+</body>
+</html>
